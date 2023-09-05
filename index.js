@@ -9,14 +9,14 @@ const AMPMSection = document.getElementById("ampm-dropdown");
 const hourSection = document.getElementById("hour-dropdown");
 const minuteSection = document.getElementById("minute-dropdown");
 
-clcBtn.addEventListener("click", calcSleepTimes);
+clcBtn.addEventListener("click", calcBedTimes);
 returnBtn.addEventListener("click", () => {
     promptSection.classList.remove("hidden");
     imageContainer.classList.remove("hidden");
     resultSection.classList.add("hidden");
   });
   
-function calcSleepTimes() {
+function calcBedTimes() {
     let sleepTime = new Date(2000, 1, 1, hourSection.value, minuteSection.value -644);
     if(AMPMSection.value == "PM") {
         sleepTime.setHours(sleepTime.getHours() + 12);
