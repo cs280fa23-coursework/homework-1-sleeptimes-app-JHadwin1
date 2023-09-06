@@ -21,6 +21,9 @@ function calcBedTimes() {
     if(AMPMSection.value == "PM") {
         sleepTime.setHours(sleepTime.getHours() + 12);
     }
+    if(hourSection.value == 12) {
+        sleepTime.setHours(sleepTime.getHours() + 12);
+    }
 
     bedtimeHoursDiv.innerHTML = "";
     for (let i = 6; i >= 1; i--) {
